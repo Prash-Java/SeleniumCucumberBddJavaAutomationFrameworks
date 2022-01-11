@@ -11,5 +11,5 @@ import org.junit.runner.RunWith;
         stepNotifications = true,
         tags = "@TestCase_0001"
 )
-public class TestRunner {
+public class TestRunnerJunit {
 }
