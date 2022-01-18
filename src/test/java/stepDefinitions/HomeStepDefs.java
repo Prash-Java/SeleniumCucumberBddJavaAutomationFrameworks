@@ -55,7 +55,7 @@ public class HomeStepDefs {
 
     @Then("^User will verify credentials fields are present on screen$")
     public void userWillVerifyCredentialsFieldsArePresentOnScreen(DataTable dataTable) {
-        List<List<String>> data = dataTable.asLists();
+        List<List<String>> data = dataTable.asLists(String.class);
         for(int i=0;i<data.size();i++){
             System.out.println("Value: " + data.get(i));
         }
