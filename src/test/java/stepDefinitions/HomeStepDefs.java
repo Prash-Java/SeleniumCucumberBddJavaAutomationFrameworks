@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.google.inject.Inject;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,20 +10,16 @@ import io.cucumber.junit.Cucumber;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
+import pages.MyPage;
 
 import java.util.List;
 import java.util.Map;
 
 //@RunWith(Cucumber.class)    //optional automation
 public class HomeStepDefs {
-//    @Before
-//    public void setUp(){
-//        System.out.println("Before Test Case");
-//    }
-//    @After
-//    public void tearDown(){
-//        System.out.println("After Test Case");
-//    }
+    @Inject
+    public MyPage myPage;
+
     @Given("^Launch url which is expected to be hit on custom browser$")
     public void launchUrlWhichIsExpectedToBeHitOnCustomBrowser() {
         System.out.println("Cucumber BDD Frameworks");
@@ -32,6 +29,7 @@ public class HomeStepDefs {
     public void userLaunchesUrlAndVerifiesHeaderTextPresence() {
         System.out.println("Cucumber BDD Frameworks");
     }
+
     @Then("^User verifies login and password fields are present on screen$")
     public void userVerifiesLoginAndPasswordFieldsArePresentOnScreen() {
         System.out.println("Cucumber BDD Frameworks");
@@ -39,6 +37,7 @@ public class HomeStepDefs {
     @And("^User Closes the instance of browser and comes out of application$")
     public void userClosesTheInstanceOfBrowserAndComesOutOfApplication() {
         System.out.println("Cucumber BDD Frameworks");
+        myPage.testMethod();
     }
 
     @Then("^User will verify \"([^\"]*)\" and \"([^\"]*)\" fields are present on screen$")
