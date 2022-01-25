@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepDefinitions",
         stepNotifications = true,
-        tags = "@TestCase_0001"
+        tags = "@TestCase_0002"
 )
 public class TestRunnerJunit {
 }
