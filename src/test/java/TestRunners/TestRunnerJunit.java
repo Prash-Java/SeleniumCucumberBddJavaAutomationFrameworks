@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty","html:target/cucumber-html-reports",
                 "json:target/cucumber-reports/cucumber.json", "junit:target/cucumber-reports/cucumber.xml",
                 /*"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"*/},
-        tags = "@TestCase_0001"
+        tags = "@Verifone_Common_Portal"
 
 )
 public class TestRunnerJunit {

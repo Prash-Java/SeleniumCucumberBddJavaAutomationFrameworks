@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.141">
-    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With No Parameters" time="0.253">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="1.347">
+    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With No Parameters" time="0.265">
         <system-out><![CDATA[Given Launch url which is expected to be hit on custom browser..............passed
 When User launches url and verifies header text presence....................passed
 Then User verifies login and password fields are present on screen..........passed
+And User Closes the instance of browser and comes out of application........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With Parameters Without Examples" time="0.018">
+        <system-out><![CDATA[Given Launch url which is expected to be hit on custom browser..............passed
+When User launches url and verifies header text presence....................passed
+Then User will need verify "login" and "password" fields are present on screen.passed
+And User Closes the instance of browser and comes out of application........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With Parameters In Examples" time="0.006">
+        <system-out><![CDATA[Given Launch url which is expected to be hit on custom browser..............passed
+When User launches url and verifies header text presence....................passed
+Then User will verify "Veri1" and "Veri@123" fields are present on screen...passed
+And User Closes the instance of browser and comes out of application........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With Parameters In Examples 2" time="0.025">
+        <system-out><![CDATA[Given Launch url which is expected to be hit on custom browser..............passed
+When User launches url and verifies header text presence....................passed
+Then User will verify "Veri2" and "Veri@123" fields are present on screen...passed
+And User Closes the instance of browser and comes out of application........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With Parameters DataTable As Lists" time="0.059">
+        <system-out><![CDATA[Given Launch url which is expected to be hit on custom browser..............passed
+When User launches url and verifies header text presence....................passed
+Then User will verify credentials fields are present on screen..............passed
+And User Closes the instance of browser and comes out of application........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Verifone Common Portal Launch" name="Launch Common Portal In Custom Environment With Parameters DataTable As Maps" time="0.024">
+        <system-out><![CDATA[Given Launch url which is expected to be hit on custom browser..............passed
+When User launches url and verifies header text presence....................passed
+Then User will verify credentials fields are present on screen navigation...passed
 And User Closes the instance of browser and comes out of application........passed
 ]]></system-out>
     </testcase>

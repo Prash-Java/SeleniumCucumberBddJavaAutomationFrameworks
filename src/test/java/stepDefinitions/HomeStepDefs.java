@@ -10,6 +10,8 @@ import io.cucumber.junit.Cucumber;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import pages.MyPage;
 
 import java.util.List;
@@ -31,8 +33,9 @@ public class HomeStepDefs {
     }
 
     @Then("^User verifies login and password fields are present on screen$")
-    public void userVerifiesLoginAndPasswordFieldsArePresentOnScreen() {
+    public void userVerifiesLoginAndPasswordFieldsArePresentOnScreen() throws InterruptedException {
         System.out.println("Cucumber BDD Frameworks");
+        System.setProperty("","");
     }
     @And("^User Closes the instance of browser and comes out of application$")
     public void userClosesTheInstanceOfBrowserAndComesOutOfApplication() {

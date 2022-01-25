@@ -1,0 +1,4 @@
+hooks\HooksClass.class
+TestRunners\TestRunnerJunit.class
+pages\MyPage.class
+stepDefinitions\HomeStepDefs.class
