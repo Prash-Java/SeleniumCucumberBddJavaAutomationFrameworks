@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestRunners.TestRunnerJunit
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.998 sec - in TestRunners.TestRunnerJunit
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.43 sec - in TestRunners.TestRunnerJunit

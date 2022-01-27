@@ -132,12 +132,12 @@
             <version>31.0.1-jre</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-picocontainer</artifactId>-->
-<!--            <version>7.2.3</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.cucumber</groupId>-->
+        <!--            <artifactId>cucumber-picocontainer</artifactId>-->
+        <!--            <version>7.2.3</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -175,14 +175,14 @@
                             <projectName>CucumberBDDFrameworks</projectName>
                             <outputDirectory>target/cucumber-reports/cucumber-html-reports</outputDirectory>
                             <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
-<!--                            <cucumberOutput>target/cucumber-reports/cucumber.json</cucumberOutput>-->
+                            <!--                            <cucumberOutput>target/cucumber-reports/cucumber.json</cucumberOutput>-->
                             <jsonFiles>
                                 <param>**/*.json</param>
                             </jsonFiles>
-<!--                            <buildNumber>1</buildNumber>-->
-<!--                            <skip>false</skip>-->
-<!--                            <classificationDirectory>${project.build.directory}/cucumber-reports</classificationDirectory>-->
-<!--                            <checkBuildResult>false</checkBuildResult>-->
+                            <!--                            <buildNumber>1</buildNumber>-->
+                            <!--                            <skip>false</skip>-->
+                            <!--                            <classificationDirectory>${project.build.directory}/cucumber-reports</classificationDirectory>-->
+                            <!--                            <checkBuildResult>false</checkBuildResult>-->
                         </configuration>
                     </execution>
                 </executions>

@@ -35,7 +35,6 @@ public class HomeStepDefs {
     @Then("^User verifies login and password fields are present on screen$")
     public void userVerifiesLoginAndPasswordFieldsArePresentOnScreen() throws InterruptedException {
         System.out.println("Cucumber BDD Frameworks");
-        System.setProperty("","");
     }
     @And("^User Closes the instance of browser and comes out of application$")
     public void userClosesTheInstanceOfBrowserAndComesOutOfApplication() {
