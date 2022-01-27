@@ -6,12 +6,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.junit.Cucumber;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.MyPage;
 
 import java.util.List;
@@ -70,4 +64,6 @@ public class HomeStepDefs {
             System.out.println("Values: " + data.get(i).get("password"));
         }
     }
+
+
 }

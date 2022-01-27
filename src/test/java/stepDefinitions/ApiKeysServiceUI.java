@@ -3,13 +3,23 @@ package stepDefinitions;
 
 import com.google.inject.Inject;
 import com.utilities.SeleniumUtil;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import pages.ApiKeysPage;
+import pages.LoginPage;
 
 public class ApiKeysServiceUI extends SeleniumUtil {
 
     @Inject
     ApiKeysPage apiKeysPage;
+
+    @Inject
+    LoginPage loginPage;
 
     public static int tableRowSize;
 
@@ -17,12 +27,51 @@ public class ApiKeysServiceUI extends SeleniumUtil {
         waitForElementVisibility(apiKeysPage.getDataLoader());
     }
 
-    public void click_add_api_keys_test() {
+
+    @Given("^User lauches the Application in \"(.*)\" Environment as \"(.*)\" and \"(.*)\"$")
+    public void userLauchesTheApplicationInEnvironmentAsAnd(String url, String userName, String password) throws InterruptedException {
+        getDriver();
+        launchURL(url);
+        waitForPageToLoad();
+        if (!loginPage.getButtonSignIn().isDisplayed()) {
+            System.exit(1);
+        }
+        try {
+            loginPage.getAcceptCookieButton().click();
+        } catch (NoSuchElementException e) {
+            System.out.println("Cookie already accepted or pop up not display");
+        } catch (Exception e) {
+            System.out.println("Continue to next step-Generic");
+        }
+        waitForPageToLoad();
+        log_in_with(userName,password);
+
+    }
+
+    public void log_in_with(String email, String password) throws InterruptedException {
+        enter(loginPage.getButtonSignIn());
+        Thread.sleep(10000);
+        enterText(loginPage.getButtonSignIn(),email);
+        enterText(loginPage.getFieldPassword(),password);
+        enter(loginPage.getButtonLogin());
+        try {
+            enter(loginPage.getCookiePopUpOkButton());
+            enter(loginPage.getKeepDefaultLanguageButton());
+        } catch (ElementNotVisibleException e) {
+            System.out.println("Continue to next step");
+        } catch (Exception e) {
+            System.out.println("Continue to next step-Generic");
+        }
+}
+
+    @When("User clicks API Keys")
+    public void userClicksAPIKeys() {
         enter(apiKeysPage.getNavbarItemDropdownLink());
         enter(apiKeysPage.getNavbarApiKeysLink());
     }
 
-    public void perform_add_api_keys_test() {
+    @And("User Creates an New API Key")
+    public void userCreatesAnNewAPIKey() {
         wait_until_page_is_loaded();
         tableRowSize = apiKeysPage.getTableRowList().size();
         if(tableRowSize == 5){
@@ -39,7 +88,8 @@ public class ApiKeysServiceUI extends SeleniumUtil {
         wait_until_page_is_loaded();
     }
 
-    public void perform_revoke_access_api_keys_test() {
+    @Then("User Verifies the created API Keys")
+    public void userVerifiesTheCreatedAPIKeys() {
         wait_until_page_is_loaded();
         int TotalRowSize = apiKeysPage.getTableRowList().size();
         if (TotalRowSize > 0) {
