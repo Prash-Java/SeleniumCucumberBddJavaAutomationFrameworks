@@ -1,10 +1,12 @@
 package pages;
+import com.utilities.SeleniumUtil;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ApiKeysPage {
+public class ApiKeysPage extends SeleniumUtil {
 
         @FindBy(css = "[data-e2e=delete-key-button]")
         private WebElement buttonRevokeAccess;
@@ -43,31 +45,45 @@ public class ApiKeysPage {
         private WebElement textApiKeyCreated;
 
         public WebElement getButtonRevokeAccess() {
-                return buttonRevokeAccess;
+                WebElement element=driver.findElement(By.cssSelector("[data-e2e=delete-key-button]"));
+                return element;
+//                return buttonRevokeAccess;
         }
 
         public WebElement getButtonDiscard() {
-                return buttonDiscard;
+                WebElement element=driver.findElement(By.cssSelector("[data-e2e=modal-discard-button]"));
+                return element;
+//                return buttonDiscard;
         }
 
         public WebElement getButtonCopyPublicKey() {
-                return buttonCopyPublicKey;
+                WebElement element=driver.findElement(By.cssSelector("div.level portal-copy-to-clipboard:nth-child(2) > button.level-right.button.is-primary"));
+                return element;
+//                return buttonCopyPublicKey;
         }
 
         public WebElement getButtonCreateApiKeys() {
-                return buttonCreateApiKeys;
+                WebElement element=driver.findElement(By.cssSelector("[data-e2e=link-new]"));
+                return element;
+//                return buttonCreateApiKeys;
         }
 
         public List<WebElement> getTableRowList() {
-                return tableRowList;
+                List<WebElement> elements=driver.findElements(By.cssSelector("[data-e2e=table-row]"));
+                return elements;
+//                return tableRowList;
         }
 
         public WebElement getTableFirstRow() {
-                return tableFirstRow;
+                WebElement element=driver.findElement(By.cssSelector("tbody:nth-child(2) tr:nth-child(1)"));
+                return element;
+//                return tableFirstRow;
         }
 
         public WebElement getDataLoader() {
-                return dataLoader;
+                WebElement element=driver.findElement(By.cssSelector("span.icon.loader"));
+                return element;
+//                return dataLoader;
         }
 
         public WebElement getNotifySuccessMessage() {
@@ -75,15 +91,21 @@ public class ApiKeysPage {
         }
 
         public WebElement getNotifySuccessCopiedMessage() {
-                return notifySuccessCopiedMessage;
+                WebElement element= driver.findElement(By.cssSelector("[data-e2e=notifier-toast]"));
+                return element;
+//                return notifySuccessCopiedMessage;
         }
 
         public WebElement getNavbarItemDropdownLink() {
-                return navbarItemDropdownLink;
+                WebElement element= driver.findElement(By.cssSelector("div[class='navbar-item has-dropdown has-circle']"));
+                return element;
+//                return navbarItemDropdownLink;
         }
 
         public WebElement getNavbarApiKeysLink() {
-                return navbarApiKeysLink;
+                WebElement element=driver.findElement(By.cssSelector("[data-e2e=menu-item-api-keys]"));
+                return element;
+//                return navbarApiKeysLink;
         }
 
         public WebElement getTextApiKeyCreated() {

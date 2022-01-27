@@ -33,17 +33,18 @@ public class ApiKeysServiceUI extends SeleniumUtil {
         getDriver();
         launchURL(url);
         waitForPageToLoad();
-        if (!loginPage.getButtonSignIn().isDisplayed()) {
-            System.exit(1);
-        }
-        try {
-            loginPage.getAcceptCookieButton().click();
-        } catch (NoSuchElementException e) {
-            System.out.println("Cookie already accepted or pop up not display");
-        } catch (Exception e) {
-            System.out.println("Continue to next step-Generic");
-        }
-        waitForPageToLoad();
+//        if (!loginPage.getButtonSignIn().isDisplayed()) {
+//            System.exit(1);
+//        }
+//        try {
+//            loginPage.getAcceptCookieButton().click();
+//        } catch (NoSuchElementException e) {
+//            System.out.println("Cookie already accepted or pop up not display");
+//        } catch (Exception e) {
+//            System.out.println("Continue to next step-Generic");
+//        }
+//        waitForPageToLoad();
+
         log_in_with(userName,password);
 
     }
@@ -51,7 +52,7 @@ public class ApiKeysServiceUI extends SeleniumUtil {
     public void log_in_with(String email, String password) throws InterruptedException {
         enter(loginPage.getButtonSignIn());
         Thread.sleep(10000);
-        enterText(loginPage.getButtonSignIn(),email);
+        enterText(loginPage.getFieldUserName(),email);
         enterText(loginPage.getFieldPassword(),password);
         enter(loginPage.getButtonLogin());
         try {
@@ -64,37 +65,43 @@ public class ApiKeysServiceUI extends SeleniumUtil {
         }
 }
 
-    @When("User clicks API Keys")
+    @When("^User clicks API Keys$")
     public void userClicksAPIKeys() {
         enter(apiKeysPage.getNavbarItemDropdownLink());
         enter(apiKeysPage.getNavbarApiKeysLink());
     }
 
     @And("User Creates an New API Key")
-    public void userCreatesAnNewAPIKey() {
-        wait_until_page_is_loaded();
+    public void userCreatesAnNewAPIKey() throws InterruptedException {
+//        wait_until_page_is_loaded();
+        Thread.sleep(10000);
         tableRowSize = apiKeysPage.getTableRowList().size();
         if(tableRowSize == 5){
             enter(apiKeysPage.getTableFirstRow());
             enter(apiKeysPage.getButtonRevokeAccess());
-            wait_until_page_is_loaded();
+//            wait_until_page_is_loaded();
             refreshPage();
+            Thread.sleep(10000);
         }
-        wait_until_page_is_loaded();
+//        wait_until_page_is_loaded();
+//        Thread.sleep(10000);
         enter(apiKeysPage.getButtonCreateApiKeys());
         enter(apiKeysPage.getButtonCopyPublicKey());
         waitForElementVisibility(apiKeysPage.getNotifySuccessCopiedMessage());
         enter(apiKeysPage.getButtonDiscard());
-        wait_until_page_is_loaded();
+//        wait_until_page_is_loaded();
+        Thread.sleep(10000);
     }
 
     @Then("User Verifies the created API Keys")
-    public void userVerifiesTheCreatedAPIKeys() {
-        wait_until_page_is_loaded();
+    public void userVerifiesTheCreatedAPIKeys() throws InterruptedException {
+//        wait_until_page_is_loaded();
+        Thread.sleep(10000);
         int TotalRowSize = apiKeysPage.getTableRowList().size();
         if (TotalRowSize > 0) {
             enter(apiKeysPage.getTableFirstRow());
-            wait_until_page_is_loaded();
+//            wait_until_page_is_loaded();
+            Thread.sleep(10000);
             enter(apiKeysPage.getButtonRevokeAccess());
         } else {
             Assert.assertFalse(true,"There is no api keys present in the table to delete ");

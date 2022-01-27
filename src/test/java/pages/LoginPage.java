@@ -2,8 +2,10 @@ package pages;
 
 
 import com.utilities.SeleniumUtil;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends SeleniumUtil {
 
@@ -51,19 +53,27 @@ public class LoginPage extends SeleniumUtil {
     }
 
     public WebElement getButtonSignIn() {
-        return buttonSignIn;
+        WebElement element=driver.findElement(By.cssSelector("button[data-e2e=app-button-login]"));
+        return element;
+//        return buttonSignIn;
     }
 
     public WebElement getFieldUserName() {
-        return fieldUserName;
+        WebElement element=driver.findElement(By.cssSelector("input[id='idToken1']"));
+        return element;
+//        return fieldUserName;
     }
 
     public WebElement getFieldPassword() {
-        return fieldPassword;
+        WebElement element=driver.findElement(By.cssSelector("input[id='idToken2']"));
+        return element;
+//        return fieldPassword;
     }
 
     public WebElement getButtonLogin() {
-        return buttonLogin;
+        WebElement element=driver.findElement(By.cssSelector("input[id='loginButton_0']"));
+        return element;
+//        return buttonLogin;
     }
 
     public WebElement getButtonAllow() {

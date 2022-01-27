@@ -13,10 +13,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 public class SeleniumUtil {
-    public WebDriver driver;
+    public static WebDriver driver;
 
     public WebDriver getDriver(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\40108\\ITC-CucumberBddJavaAutomationFrameworks\\browserdrivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\prash\\IdeaProjects\\CucumberBDDFrameworks\\browserdrivers\\chromedriver.exe");
         driver= new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
