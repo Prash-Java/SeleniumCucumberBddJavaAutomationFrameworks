@@ -174,7 +174,7 @@
                         <configuration>
                             <projectName>CucumberBDDFrameworks</projectName>
                             <outputDirectory>target/cucumber-reports/cucumber-html-reports</outputDirectory>
-                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
+                            <inputDirectory>target/cucumber-reports</inputDirectory>
 <!--                            <cucumberOutput>target/cucumber-reports/cucumber.json</cucumberOutput>-->
                             <jsonFiles>
                                 <param>**/*.json</param>

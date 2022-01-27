@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CucumberBDDFrameworks" />
+        <module name="ITC-CucumberBddJavaAutomationFrameworks" />
       </profile>
     </annotationProcessing>
   </component>
