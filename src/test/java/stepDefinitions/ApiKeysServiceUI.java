@@ -66,9 +66,10 @@ public class ApiKeysServiceUI extends SeleniumUtil {
 }
 
     @When("^User clicks API Keys$")
-    public void userClicksAPIKeys() {
+    public void userClicksAPIKeys() throws InterruptedException {
         enter(apiKeysPage.getNavbarItemDropdownLink());
         enter(apiKeysPage.getNavbarApiKeysLink());
+        Thread.sleep(2000);
     }
 
     @And("User Creates an New API Key")
