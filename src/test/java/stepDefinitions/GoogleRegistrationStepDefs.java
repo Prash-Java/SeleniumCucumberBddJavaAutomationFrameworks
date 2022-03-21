@@ -75,7 +75,7 @@ public class GoogleRegistrationStepDefs {
 
     @And("^User waits and enters otp value as \"([^\"]*)\"$")
     public void userWaitsAndEntersOtpValueAs(String phoneOTP) throws InterruptedException {
-        Thread.sleep(55000);
+        Thread.sleep(20000);
         googleRegistrationPage.userEntersOtpFromMobile(phoneOTP);
     }
 
@@ -107,5 +107,10 @@ public class GoogleRegistrationStepDefs {
     @And("^User enters month of its birth as \"([^\"]*)\"$")
     public void userEntersMonthOfItsBirthAs(String birthMonth) {
         googleRegistrationPage.userEntersBirthMonth(birthMonth);
+    }
+
+    @And("User will close the driver or browser")
+    public void userWillCloseTheDriverOrBrowser() {
+        googleRegistrationPage.userClosesBrowser();
     }
 }

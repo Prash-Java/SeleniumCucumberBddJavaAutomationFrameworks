@@ -23,6 +23,7 @@ Feature: Create Google Registration
     And User enters its Gender value as "<gender>"
     And User clicks on Next Button
     Then User verifies presence of Yes I am In Button in Page
+    And User will close the driver or browser
 
     Examples:
       |googleURL            |FirstName   |LastName    |UserName      |Password|PhoneNumber|expectedText        |day|month    |year|gender|

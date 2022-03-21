@@ -1,51 +1,60 @@
 package pages;
 
+import com.google.inject.Inject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.SeleniumHelper;
 
-import java.security.SecureRandom;
-
-import static com.utilities.SeleniumUtil.driver;
+import java.time.Duration;
 
 public class GoogleRegistrationPage {
     public static WebDriver driver;
     public Select select;
 
+    @Inject
+    public SeleniumHelper seleniumHelper;
+
+    public void waitForPageToLoad(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(webDriver -> "complete".equals(((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState")));
+    }
+
     public void launchGmailBaseURLForRegistration(String baseUrl) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/browserdrivers/chromedriver.exe");
         driver=new ChromeDriver();
-        Thread.sleep(5000);
+        waitForPageToLoad();
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.get(baseUrl);
-        Thread.sleep(5000);
+        waitForPageToLoad();
     }
 
     public void userClicksOnCreateAccountButton() throws InterruptedException {
         WebElement createAccountButton= driver.findElement(By.xpath("//span[text()='Create account']"));
         createAccountButton.click();
-        Thread.sleep(2000);
     }
 
     public void userSelectsForMySelfOption() throws InterruptedException {
         WebElement forMyselfOption= driver.findElement(By.xpath("//span[text()='For myself']"));
         forMyselfOption.click();
-        Thread.sleep(2000);
+        waitForPageToLoad();
     }
 
     public void userEntersFirstName(String firstName) {
         WebElement firstNameField= driver.findElement(By.id("firstName"));
-        firstNameField.sendKeys(firstName);
+        firstNameField.sendKeys(seleniumHelper.randomAlphabeticValues(10));
     }
 
     public void userEntersLastName(String lastName) {
         WebElement lastNameField= driver.findElement(By.id("lastName"));
-        lastNameField.sendKeys(lastName);
+        lastNameField.sendKeys(seleniumHelper.randomAlphabeticValues(10));
     }
 
     public void userValidatesGmailPage(String expectedText) {
@@ -58,7 +67,7 @@ public class GoogleRegistrationPage {
         WebElement userNameField= driver.findElement(By.id("username"));
         userNameField.click();
         userNameField.clear();
-        userNameField.sendKeys(userName);
+        userNameField.sendKeys(seleniumHelper.randomAlphabeticValues(12));
     }
 
     public void userEntersPassword(String password) {
@@ -74,7 +83,7 @@ public class GoogleRegistrationPage {
     public void userClicksOnNextButton() throws InterruptedException {
         WebElement nextButton=driver.findElement(By.xpath("//span[text()='Next']"));
         nextButton.click();
-        Thread.sleep(3000);
+        waitForPageToLoad();
     }
 
     public void userEntersPhoneNumber(String phoneNumber) {
@@ -90,11 +99,12 @@ public class GoogleRegistrationPage {
     public void userClicksOnVerifyButton() throws InterruptedException {
         WebElement verifyButton= driver.findElement(By.xpath("//span[text()='Verify']"));
         verifyButton.click();
-        Thread.sleep(5000);
+//        waitForPageToLoad();
+        Thread.sleep(2000);
     }
 
     public void userEntersItsBirthDay(String birthDay) {
-        WebElement dayField=driver.findElement(By.id("day"));
+        WebElement dayField=driver.findElement(By.name("day"));
         dayField.sendKeys(birthDay);
     }
 
@@ -118,5 +128,9 @@ public class GoogleRegistrationPage {
     public void userVerifiesPresenceOfButton() {
         WebElement buttonElement= driver.findElement(By.xpath("//span[text()='Yes, I’m in']"));
         Assert.assertTrue(buttonElement.isDisplayed());
+    }
+
+    public void userClosesBrowser() {
+        driver.close();
     }
 }
