@@ -85,7 +85,7 @@ public class GoogleRegistrationStepDefs {
     }
 
     @And("^User enters date of its birth as \"([^\"]*)\"$")
-    public void userEntersDateOfItsBirthAs(String birthDay) {
+    public void userEntersDateOfItsBirthAs(String birthDay) throws InterruptedException {
         googleRegistrationPage.userEntersItsBirthDay(birthDay);
     }
 

@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.SeleniumHelper;
@@ -27,8 +28,11 @@ public class GoogleRegistrationPage {
     }
 
     public void launchGmailBaseURLForRegistration(String baseUrl) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/browserdrivers/chromedriver.exe");
-        driver=new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/browserdrivers/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+//        ChromeDriver driver = new ChromeDriver(options);
+        driver=new ChromeDriver(options);
         waitForPageToLoad();
         driver.manage().window().maximize();
         Thread.sleep(3000);
@@ -42,7 +46,7 @@ public class GoogleRegistrationPage {
     }
 
     public void userSelectsForMySelfOption() throws InterruptedException {
-        WebElement forMyselfOption= driver.findElement(By.xpath("//span[text()='For myself']"));
+        WebElement forMyselfOption= driver.findElement(By.xpath("//span[text()='For my personal use']"));
         forMyselfOption.click();
         waitForPageToLoad();
     }
@@ -103,14 +107,14 @@ public class GoogleRegistrationPage {
         Thread.sleep(2000);
     }
 
-    public void userEntersItsBirthDay(String birthDay) {
+    public void userEntersItsBirthDay(String birthDay) throws InterruptedException {
+        Thread.sleep(3000);
         WebElement dayField=driver.findElement(By.name("day"));
         dayField.sendKeys(birthDay);
     }
 
     public void userEntersBirthMonth(String birthMonth) {
-        WebElement monthDropdown=driver.findElement(By.id("month"));
-        select=new Select(monthDropdown);
+        select=new Select(driver.findElement(By.id("month")));
         select.selectByVisibleText(birthMonth);
     }
 

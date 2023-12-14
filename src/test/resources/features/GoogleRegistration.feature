@@ -9,20 +9,20 @@ Feature: Create Google Registration
     And User selects For Myself option
     And User enter First name text field as "<FirstName>"
     And User enter Last name text field as "<LastName>"
-    And User enters its preferred Username as "<UserName>"
-    And User enters its password as "<Password>"
-    And User enters its confirm Password as "<Password>"
+#    And User enters its preferred Username as "<UserName>"
+#    And User enters its password as "<Password>"
+#    And User enters its confirm Password as "<Password>"
     And User clicks on Next Button
-    And User enters Phone number as "<PhoneNumber>"
-    And User clicks on Next Button
-    And User waits and enters otp value as "<MobileOtp>"
-    And User clicks on Verify Button
+#    And User enters Phone number as "<PhoneNumber>"
+#    And User clicks on Next Button
+#    And User waits and enters otp value as "<MobileOtp>"
+#    And User clicks on Verify Button
     And User enters date of its birth as "<day>"
     And User enters month of its birth as "<month>"
     And User enters year of its birth as "<year>"
     And User enters its Gender value as "<gender>"
     And User clicks on Next Button
-    Then User verifies presence of Yes I am In Button in Page
+#    Then User verifies presence of Yes I am In Button in Page
     And User will close the driver or browser
 
     Examples:

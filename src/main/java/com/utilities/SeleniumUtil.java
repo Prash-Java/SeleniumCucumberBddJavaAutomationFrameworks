@@ -18,7 +18,7 @@ public class SeleniumUtil {
     public static WebDriver driver;
 
     public WebDriver getDriver(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\prash\\IdeaProjects\\CucumberBDDFrameworks\\browserdrivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\prash\\IdeaProjects\\CucumberBDDFrameworks\\browserdrivers\\chromedriver");
         driver= new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
