@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.745">
+    <testcase classname="Launch Pagenation app" name="Launch Pagenation App" time="15.386">
+        <system-out>
+            <![CDATA[Given User will navigate to pagenation app screen "http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com/".passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
