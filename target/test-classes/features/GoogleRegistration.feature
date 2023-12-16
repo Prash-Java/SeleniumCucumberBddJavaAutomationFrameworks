@@ -26,6 +26,6 @@ Feature: Create Google Registration
     And User will close the driver or browser
 
     Examples:
-      |googleURL            |FirstName   |LastName    |UserName      |Password|PhoneNumber|expectedText        |day|month    |year|gender|
-      |https://www.gmail.com|DellHpLenovo|LenovoHpDell|Zxasjhgfdcv56 |45&^%$sd|8797876181 |to continue to Gmail|17 |September|2001|Male  |
+      |googleURL            |FirstName   |LastName    |UserName      |Password|PhoneNumber|expectedText        |day|month    |year|gender|name|
+      |https://www.gmail.com|DellHpLenovo|LenovoHpDell|Zxasjhgfdcv56 |45&^%$sd|8797876181 |to continue to Gmail|17 |September|2001|Male  |Omkar|
 

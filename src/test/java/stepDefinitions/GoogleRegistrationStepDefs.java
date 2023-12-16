@@ -113,4 +113,6 @@ public class GoogleRegistrationStepDefs {
     public void userWillCloseTheDriverOrBrowser() {
         googleRegistrationPage.userClosesBrowser();
     }
+
+
 }
