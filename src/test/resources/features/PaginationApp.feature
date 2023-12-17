@@ -1,7 +1,7 @@
 @PaginationAppTest
 Feature: Create Pagination App functionality tests
 
-  @TestCaseUI_PaginationAppLaunch
+  @TestCaseUI_PaginationAppLaunch  @UI_Test
   Scenario Outline: Launch Pagination App Feature
     Given User will navigate to pagination app "<paginationAppURL>"
     When User Validates On pagination app page header in screen "<headerText>"
@@ -12,7 +12,7 @@ Feature: Create Pagination App functionality tests
       |paginationAppURL                                                                  |headerText|pageTitleText |
       |http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com|Users List|Pagination App|
 
-  @TestCaseAPI_PaginationAppLaunch
+  @TestCaseAPI_PaginationAppLaunch @API_Test
   Scenario Outline: Test GET Http request in Pagination App as Response for validations
     Given User will assert params after hitting base uri for pagination app "<paginationAppURL>"
 
