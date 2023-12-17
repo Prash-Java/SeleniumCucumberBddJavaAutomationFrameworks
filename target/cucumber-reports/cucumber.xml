@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.74">
+    <testcase classname="Create Pagination App functionality tests" name="Test GET Http request in Pagination App" time="3.365">
+        <system-out>
+            <![CDATA[Given User will assert params after hitting base uri for pagination app "http://userpaginationapp.us-east-1.elasticbeanstalk.com".passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
