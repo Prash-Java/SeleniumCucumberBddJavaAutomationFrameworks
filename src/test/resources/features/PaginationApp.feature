@@ -13,7 +13,7 @@ Feature: Create Pagination App functionality tests
       |http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com|Users List|Pagination App|
 
   @TestCaseAPI_PaginationAppLaunch
-  Scenario Outline: Test GET Http request in Pagination App
+  Scenario Outline: Test GET Http request in Pagination App as Response for validations
     Given User will assert params after hitting base uri for pagination app "<paginationAppURL>"
 
     Examples:
