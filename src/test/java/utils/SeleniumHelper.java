@@ -1,6 +1,7 @@
 package utils;
 
 import com.base.BasePage;
+import org.testng.Assert;
 
 import java.util.Random;
 
@@ -53,6 +54,10 @@ public class SeleniumHelper extends BasePage {
         System.out.println("Random String is: " + randomString);
         return randomString;
     }
+
+    public void assertCurrentText(String currentText, String getLocatorText) {
+        Assert.assertEquals(currentText, getLocatorText);
     }
+}
 
 

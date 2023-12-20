@@ -1,0 +1,25 @@
+{
+"timeStamp": "2023-12-17T05:38:01.202627850",
+"statusCode": 200,
+"status": "200 OK",
+"message": "Users Retrieved",
+"data": {
+"page": {
+"content": [],
+"pageable": {},
+"totalPages": 10,
+"totalElements": 100,
+"last": false,
+"size": 10,
+"number": 0,
+"sort": {
+"empty": true,
+"sorted": false,
+"unsorted": true
+},
+"numberOfElements": 10,
+"first": true,
+"empty": false
+}
+}
+}
