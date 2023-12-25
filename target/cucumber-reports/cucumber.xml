@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.74">
-    <testcase classname="Create Pagination App functionality tests" name="Test GET Http request in Pagination App" time="3.365">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="34.192">
+    <testcase classname="Create Pagination App functionality tests" name="Launch Pagination App Feature" time="20.308">
         <system-out>
-            <![CDATA[Given User will assert params after hitting base uri for pagination app "http://userpaginationapp.us-east-1.elasticbeanstalk.com".passed
+            <![CDATA[Given User will navigate to pagination app "http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com".passed
+When User Validates On pagination app page header in screen "Users List"....passed
+And User validates the page title with text containing "Pagination App".....passed
+Then User closes the browser instance.......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Pagination App functionality tests" name="Assertions For Pagination App Feature" time="13.523">
+        <system-out>
+            <![CDATA[Given User will navigate to pagination app "http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com".passed
+When User Validates On pagination app page header in screen "Users List"....passed
+Then User closes the browser instance.......................................passed
 ]]>
         </system-out>
     </testcase>
