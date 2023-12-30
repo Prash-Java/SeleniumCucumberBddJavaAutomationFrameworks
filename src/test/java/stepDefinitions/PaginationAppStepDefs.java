@@ -87,4 +87,9 @@ public class PaginationAppStepDefs {
         String userEmail = JsonPath.from(jsonString).get("data.page.content[5].email");
         Assert.assertTrue(userEmail.contains("mbaildon5@census.gov".trim()));
     }
+
+    @And("^User Validated the navbar for pagination app page as \"([^\"]*)\"$")
+    public void userValidatedTheNavbarForPaginationAppPageAs(String navbar) {
+        paginationAppPage.assertNavBarHeaderTile(navbar);
+    }
 }

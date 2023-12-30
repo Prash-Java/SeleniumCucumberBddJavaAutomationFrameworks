@@ -7,24 +7,16 @@ Feature: Create Pagination App functionality tests
 
   @TestCaseUI_PaginationAppLaunch1  @UI_Test
   Scenario Outline: Launch Pagination App Feature
-#    Given User will navigate to pagination app "<paginationAppURL>"
     When User Validates On pagination app page header in screen "<headerText>"
     And User validates the page title with text containing "<pageTitleText>"
+    And User Validated the navbar for pagination app page as "<NavBarValue>"
     Then User closes the browser instance
 
     Examples:
-      |paginationAppURL                                                                  |headerText|pageTitleText |
-      |http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com|Users List|Pagination App|
+      |headerText|pageTitleText |NavBarValue|
+      |Users List|Pagination App|NavBar     |
 
-  @TestCaseUI_PaginationAppLaunch2  @UI_Test
-  Scenario Outline: Assertions For Pagination App Feature
-#    Given User will navigate to pagination app "<paginationAppURL>"
-    When User Validates On pagination app page header in screen "<headerText>"
-    Then User closes the browser instance
 
-    Examples:
-      |paginationAppURL                                                                  |headerText|
-      |http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com|Users List|
 
 #  @TestCaseAPI_PaginationAppLaunch @API_Test
 #  Scenario Outline: Test GET Http request in Pagination App as Response for validations
