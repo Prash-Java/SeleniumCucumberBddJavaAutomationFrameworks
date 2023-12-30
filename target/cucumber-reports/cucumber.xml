@@ -1,43 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="23.811">
-    <testcase classname="Create Pagination App functionality tests" name="Launch Pagination App Feature" time="23.646">
-        <failure message="invalid selector: Unable to locate an element with the xpath expression //nav/div/a[text()='Navbar' because of the following error:&#10;SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//nav/div/a[text()='Navbar'' is not a valid XPath expression.&#10;  (Session info: chrome=120.0.6099.129)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'Sambits-MacBook-Air.local', ip: 'fe80:0:0:0:1c97:e03b:1ce2:f18c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '11.0.21'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [bf8385bbd048cee0eba8ae7ae8933ef7, findElement {using=xpath, value=//nav/div/a[text()='Navbar'}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.129, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/xc/32h5fwm50s7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52258}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52258/devtoo..., se:cdpVersion: 120.0.6099.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: bf8385bbd048cee0eba8ae7ae8933ef7" type="org.openqa.selenium.InvalidSelectorException">
-            <![CDATA[Given User will navigate to pagination app "http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com".passed
-When User Validates On pagination app page header in screen "Users List"....passed
-And User validates the page title with text containing "Pagination App".....passed
-And User Validated the navbar for pagination app page as "NavBar"...........failed
-Then User closes the browser instance.......................................skipped
-
-StackTrace:
-org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //nav/div/a[text()='Navbar' because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//nav/div/a[text()='Navbar'' is not a valid XPath expression.
-  (Session info: chrome=120.0.6099.129)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'Sambits-MacBook-Air.local', ip: 'fe80:0:0:0:1c97:e03b:1ce2:f18c%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.2.1', java.version: '11.0.21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bf8385bbd048cee0eba8ae7ae8933ef7, findElement {using=xpath, value=//nav/div/a[text()='Navbar'}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.129, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/xc/32h5fwm50s7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52258}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52258/devtoo..., se:cdpVersion: 120.0.6099.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bf8385bbd048cee0eba8ae7ae8933ef7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at pages.PaginationAppPage.assertNavBarHeaderTile(PaginationAppPage.java:59)
-	at stepDefinitions.PaginationAppStepDefs.userValidatedTheNavbarForPaginationAppPageAs(PaginationAppStepDefs.java:93)
-	at ✽.User Validated the navbar for pagination app page as "NavBar"(file:///Users/sambitmishra/Documents/AutomationPrasticeVersion%202/src/test/resources/features/PaginationApp.feature:12)
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.298">
+    <testcase classname="Create Pagination App functionality tests" name="Launch Pagination App Feature" time="26.125">
+        <system-out>
+            <![CDATA[Given User will navigate on pagination app "http://java-angular-react-pagination-app-deploy.s3-website-us-east-1.amazonaws.com".passed
+When User Validates at pagination app page header in screen "Users List"....passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>
