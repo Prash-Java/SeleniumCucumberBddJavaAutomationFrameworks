@@ -13,7 +13,6 @@ import org.testng.Assert;
 import utils.SeleniumHelper;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class PaginationAppUiPage {
     public static WebDriver driver;
@@ -39,29 +38,48 @@ public class PaginationAppUiPage {
             waitForPageToLoad();
         }
 
+          // UserList Table title
     public void assertPageHeaderText(String expectedText) throws InterruptedException {
         Thread.sleep(5000);
         Assert.assertEquals(expectedText,driver.findElement(By.xpath("//h3[text()='Users List']")).getText());
 
     }
-
+      // NavBar
     public void assertNavigationColumnName(String navbar) throws InterruptedException {
         Thread.sleep(3000);
         Assert.assertEquals(navbar,driver.findElement(By.xpath("//a[@class='navbar-brand']")).getText());
     }
 
-    public void assertHomeHeaderTitle(String home) {
-        waitForPageToLoad();
-        String  expectedText ="Home";
-        WebElement  actualText = driver.findElement(By.xpath("//li[1]/a[@class='nav-link active']"));
-        if(actualText.equals("expectedText")) {
-            actualText.getText();
-        }
+     // Home Nav bar
+    public void assertNavHomeTitle() throws InterruptedException {
+        Thread.sleep(1500);
+        WebElement home = driver.findElement(By.xpath("//ul/li/a[text()='Home']"));
+        home.getText();
     }
 
-    public void assertIdColumnValue(String id) {
-        waitForPageToLoad();
-        Assert.assertEquals(id,driver.findElement(By.xpath("//table/thead/tr/th[1]")).getText());
+    // ID Column Value
+    public void assertIdColumnValue(String id){
+        Assert.assertEquals(id,driver.findElement(By.xpath("//*[text()='ID']")).getText());
+
+    }
+
+   // Name Column value
+    public void assertNameColumnValue(String name)  {
+        Assert.assertEquals(name, driver.findElement(By.xpath("//*[text()='Name']")).getText());
+    }
+
+     // Photo Column Value
+    public void assertPhotoColumnValue(String photo){
+        Assert.assertEquals(photo, driver.findElement(By.xpath("//*[text()='Photo']")).getText());
+    }
+
+     // Address Table Column name
+    public void assertTableTileAddress(String address) {
+        Assert.assertEquals(address, driver.findElement(By.xpath("//*[text()='Address']")).getText());
+    }
+
+    public void assertEmailDetailColumnValue(String email) {
+        Assert.assertEquals(email, driver.findElement(By.xpath("//*[text()='Email']")).getText());
     }
 }
 

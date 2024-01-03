@@ -17,8 +17,12 @@ Feature: Create Pagination App functionality tests
   @TestCaseUI_PaginationAppBodyArea  @UI_Test
   Scenario Outline: Launch Pagination App body container area
     When User Validated the pagination app id for users in body area "<IdColumnValue>"
+    And User Validated the column name for pagination page as "<NameColumnValue>"
+    And User Validates the column title for pagination page as "<PhotoColumnValue>"
+    And User Validates the table title as address for pagination page as "<AddressColumnValue>"
+    And User Validated the table title for Email for pagination page "<EmailColumnValue>"
 
     Examples:
-      |IdColumnValue|
-      |ID           |
+      |IdColumnValue|NameColumnValue|PhotoColumnValue|AddressColumnValue|EmailColumnValue|
+      |ID           |Name           |Photo           |Address           |Email           |
 

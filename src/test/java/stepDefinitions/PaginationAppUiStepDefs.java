@@ -25,14 +25,36 @@ public class PaginationAppUiStepDefs {
         paginationAppUiPage.assertNavigationColumnName(navbar);
     }
 
-    @And("User Validates the pagination app home header title {string}")
-    public void userValidatesThePaginationAppHomeHeaderTitle(String home){
-        paginationAppUiPage.assertHomeHeaderTitle(home);
+    @And("User Validates the pagination app home header title \"([^\"]*)\"$")
+    public void userValidatesThePaginationAppHomeHeaderTitle() throws InterruptedException {
+        paginationAppUiPage.assertNavHomeTitle();
     }
 
-    @When("User Validated the pagination app id for users in body area {string}")
-    public void userValidatedThePaginationAppIdForUsersInBodyArea(String id) {
+    @When("User Validated the pagination app id for users in body area \"([^\"]*)\"$")
+    public void userValidatedThePaginationAppIdForUsersInBodyArea(String id)  {
         paginationAppUiPage.assertIdColumnValue(id);
     }
+
+    @And("^User Validated the column name for pagination page as \"([^\"]*)\"$")
+    public void userValidatedTheColumnNameForPaginationPageAs(String name ){
+        paginationAppUiPage.assertNameColumnValue(name);
+    }
+
+
+    @And("^User Validates the column title for pagination page as \"([^\"]*)\"$")
+    public void userValidatesTheColumnTitleForPaginationPageAs(String photo){
+        paginationAppUiPage.assertPhotoColumnValue(photo);
+    }
+
+    @And("^User Validates the table title as address for pagination page as \"([^\"]*)\"$")
+    public void userValidatesTheTableTitleAsAddressForPaginationPageAs(String address) {
+        paginationAppUiPage.assertTableTileAddress(address);
+    }
+
+    @And("^User Validated the table title for Email for pagination page \"([^\"]*)\"$")
+    public void userValidatedTheTableTitleForEmailForPaginationPage(String email) {
+        paginationAppUiPage.assertEmailDetailColumnValue(email);
+    }
 }
+
 
