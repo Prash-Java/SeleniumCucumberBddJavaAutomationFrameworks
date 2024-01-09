@@ -1,12 +1,114 @@
 {
-"timeStamp": "2023-12-17T05:38:01.202627850",
+"timeStamp": "2023-12-29T17:55:18.943897812",
 "statusCode": 200,
 "status": "200 OK",
 "message": "Users Retrieved",
 "data": {
 "page": {
-"content": [],
-"pageable": {},
+"content": [
+{
+"id": 1,
+"name": "Royce Honeyghan",
+"email": "rhoneyghan0@yolasite.com",
+"address": "PO Box 36583",
+"status": "Active",
+"phone": "945-577-7366",
+"imageUrl": "http://dummyimage.com/247x100.png/dddddd/000000"
+},
+{
+"id": 2,
+"name": "Krystle Dy",
+"email": "kdy1@blogger.com",
+"address": "Room 659",
+"status": "Inactive",
+"phone": "285-691-5008",
+"imageUrl": "http://dummyimage.com/182x100.png/5fa2dd/ffffff"
+},
+{
+"id": 3,
+"name": "Christel Jacobowits",
+"email": "cjacobowits2@vk.com",
+"address": "20th Floor",
+"status": "Enabled",
+"phone": "507-857-8323",
+"imageUrl": "http://dummyimage.com/187x100.png/dddddd/000000"
+},
+{
+"id": 4,
+"name": "Trudy Fritz",
+"email": "tfritz3@discuz.net",
+"address": "Apt 600",
+"status": "Disabled",
+"phone": "483-530-2059",
+"imageUrl": "http://dummyimage.com/178x100.png/cc0000/ffffff"
+},
+{
+"id": 5,
+"name": "West Scotchmoor",
+"email": "wscotchmoor4@usnews.com",
+"address": "Apt 794",
+"status": "Active",
+"phone": "104-601-6859",
+"imageUrl": "http://dummyimage.com/189x100.png/ff4444/ffffff"
+},
+{
+"id": 6,
+"name": "Miriam Baildon",
+"email": "mbaildon5@census.gov",
+"address": "Suite 35",
+"status": "Inactive",
+"phone": "179-379-4384",
+"imageUrl": "http://dummyimage.com/245x100.png/dddddd/000000"
+},
+{
+"id": 7,
+"name": "Daniel Heritege",
+"email": "dheritege6@sakura.ne.jp",
+"address": "3rd Floor",
+"status": "Enabled",
+"phone": "344-953-6463",
+"imageUrl": "http://dummyimage.com/117x100.png/5fa2dd/ffffff"
+},
+{
+"id": 8,
+"name": "Devonna Tindle",
+"email": "dtindle7@census.gov",
+"address": "5th Floor",
+"status": "Active",
+"phone": "944-578-6403",
+"imageUrl": "http://dummyimage.com/110x100.png/dddddd/000000"
+},
+{
+"id": 9,
+"name": "Milissent Fadian",
+"email": "mfadian8@java.com",
+"address": "Room 158",
+"status": "Inactive",
+"phone": "881-816-4459",
+"imageUrl": "http://dummyimage.com/130x100.png/ff4444/ffffff"
+},
+{
+"id": 10,
+"name": "Phaedra Gaskoin",
+"email": "pgaskoin9@alibaba.com",
+"address": "6th Floor",
+"status": "Enabled",
+"phone": "145-994-0941",
+"imageUrl": "http://dummyimage.com/162x100.png/dddddd/000000"
+}
+],
+"pageable": {
+"pageNumber": 0,
+"pageSize": 10,
+"sort": {
+"empty": true,
+"sorted": false,
+"unsorted": true
+},
+"offset": 0,
+"paged": true,
+"unpaged": false
+},
 "totalPages": 10,
 "totalElements": 100,
 "last": false,
