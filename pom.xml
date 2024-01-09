@@ -139,6 +139,14 @@
             <artifactId>guava</artifactId>
             <version>31.0.1-jre</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+         <groupId>io.rest-assured</groupId>
+         <artifactId>rest-assured</artifactId>
+         <version>5.4.0</version>
+         <scope>test</scope>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
         <!--        <dependency>-->
         <!--            <groupId>io.cucumber</groupId>-->
