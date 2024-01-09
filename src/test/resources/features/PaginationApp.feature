@@ -18,10 +18,9 @@ Feature: Create Pagination App functionality tests
 
 
 
-#  @TestCaseAPI_PaginationAppLaunch @API_Test
-#  Scenario Outline: Test GET Http request in Pagination App as Response for validations
-#    Given User will assert params after hitting base uri for pagination app "<paginationAppURL>"
-#
-#    Examples:
-#      |paginationAppURL                                       |
-#      |http://userpaginationapp.us-east-1.elasticbeanstalk.com|
+@TestCaseAPI_PaginationAppLaunch @API_Test
+Scenario Outline: Test GET Http request in Pagination App as Response for validations
+  Given User will assert params after hitting base uri for pagination app "<paginationAppURL>"
+    Examples:
+      |paginationAppURL                                       |
+      |http://userpaginationapp.us-east-1.elasticbeanstalk.com|
